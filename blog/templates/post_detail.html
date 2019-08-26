@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class='post-entry'>
-    <h2>{{ anything_you_want.title }}</h2>
-    <p>{{ anything_you_want.body }}</p>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
 </div>
 <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
 
