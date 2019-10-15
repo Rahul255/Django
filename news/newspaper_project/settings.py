@@ -10,14 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'shogil'
-EMAIL_HOST_PASSWORD = 'rahul1234'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 
 import os
+
+
+
 
 
 LOGIN_REDIRECT_URL = 'home'
@@ -50,8 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users', #new
     'pages', #new
-    'crispy_forms'
+    'articles', #new
+    'crispy_forms',
 ]
+
+TIME_ZONE = 'Asia/Kolkata'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,4 +134,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.CustomUser1'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'shogil'
+EMAIL_HOST_PASSWORD = 'rahul1234'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
